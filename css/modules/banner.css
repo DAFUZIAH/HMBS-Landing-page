@@ -1,0 +1,73 @@
+.banner {
+	background: var(--dark-grey);
+	color: var(--light-pink);
+	text-align: center;
+	padding: 20px;
+	font-family: var(--text-font);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	font-size: 20px;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.banner img {
+	width: 20px;
+	display: inline-block;
+	margin-left: 20px;
+}
+
+/* BANNER CROSS */
+
+.banner-remove {
+	position: absolute;
+	width: 20px;
+	right: 40px;
+	top: 20px;
+	bottom: 20px;
+	cursor: pointer;
+}
+
+.banner-remove .bar {
+	width: 2px;
+	height: 20px;
+	background: var(--light-pink);
+}
+
+.banner-remove .bar.first {
+	transform: rotate(45deg);
+	position: absolute;
+}
+
+.banner-remove .bar.second {
+	transform: rotate(-45deg);
+}
+
+/* BANNER DISAPPEAR */
+
+.banner.no-display {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.banner {
+		font-size: 12px;
+		position: relative;
+	}
+
+	.banner img {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		width: 15px;
+		transform: translate(-100%);
+	}
+
+	.banner-remove {
+		right: 20px;
+		top: 25px;
+	}
+}

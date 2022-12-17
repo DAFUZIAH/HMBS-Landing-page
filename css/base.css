@@ -1,0 +1,74 @@
+:root {
+
+	--title-font: 'Merriweather', serif;
+	--text-font: 'Inter', sans-serif;
+
+	/* COLORS */
+
+	--light-pink: #FFEFDF;
+	--light-color: #fff;
+	--dark-grey: #2E3139;
+	--yellow: #FFF594;
+	--green: #C5FFD7;
+	--blue: #A4E0F7;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ol,
+ul,
+li {
+	list-style: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+	color: inherit;
+	text-decoration: none;
+}
+
+/*
+.row + .row {
+	margin-top: 16px;
+}
+
+.row > .col,
+.row > [class^=col-] {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: rgba(86, 61, 124, .15);
+	border: 1px solid rgba(86, 61, 124, .2);
+}
+*/
+
+/* GUI'S CASCADING STYLES SHEETS */
+
+body {
+	font-family: var(--title-font);
+}
+
+.main {
+	margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+	.main {
+		margin-bottom: 50px;
+	}
+}

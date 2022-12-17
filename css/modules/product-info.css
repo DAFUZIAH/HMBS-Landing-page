@@ -1,0 +1,221 @@
+.product-info {
+	color: var(--dark-grey);
+	max-width: 570px;
+	position: relative;
+	overflow: hidden;
+}
+
+.product-info.discover {
+	height: 100vh;
+}
+
+.product-info-details {
+	position: absolute;
+	font-family: var(--text-font);
+	font-weight: 300;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	z-index: 10;
+	transition: .3s;
+}
+
+.product-info-details.is-active,
+.product-info-details.chanvre.is-active,
+.product-info-details.soja.is-active {
+	transform: translateY(-20px);
+}
+
+.product-info-details.is-active::after,
+.product-info-details.chanvre.is-active::after,
+.product-info-details.soja.is-active::after {
+	transform: translateX(-20px);
+}
+
+.product-info-details::after {
+	content: '';
+	width: 30px;
+	height: 20px;
+	background-image: url(../../img/SVG/arrow.svg);
+	background-repeat: no-repeat;
+	background-size: 30px 20px;
+	position: absolute;
+	right: 0;
+	bottom: -15px;
+	transition: 1.2s ease-out;
+}
+
+.product-info-details:hover::after {
+	transform: translateX(-20px);
+}
+
+/* MAIN CONTENT */
+
+.product-info-content,
+.product-info-category,
+.product-info-text,
+.product-info-price,
+.product-info-details-content-list {
+	font-family: var(--text-font);
+}
+
+
+.product-info-category {
+	font-size: 23px;
+	font-weight: 300;
+	margin-bottom: 5px;
+}
+
+.product-info-title {
+	font-size: 80px;
+	margin-bottom: 25px;
+}
+
+.product-info-text {
+	font-weight: 300;
+	font-size: 26px;
+	margin-bottom: 30px;
+}
+
+.product-info-mini-title {
+	font-size: 26px;
+	margin-bottom: 15px;
+}
+
+.product-info-content {
+	font-size: 26px;
+	margin-bottom: 35px;
+}
+
+/* PRICE AND BUTTON */
+
+.product-info-tools {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.product-info-price {
+	font-weight: 700;
+	font-size: 40px;
+}
+
+.product-info-buyButton {
+	width: 270px;
+	height: 84px;
+	border: solid 5px var(--light-pink);
+	border-radius: 42px;
+	color: var(--dark-grey);
+	font-size: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+.product-info-buyButton::after {
+	content: '';
+	width: 300%;
+	height: 140%;
+	background-image: url(../../img/SVG/liquid-pink.svg);
+	position: absolute;
+	left: 0;
+	transform: translateX(30px) translateY(90px);
+	transition: .8s ease-out;
+	z-index: -1;
+}
+
+.product-info-buyButton:hover::after {
+	transform: translateX(-80px) translateY(-10px);
+}
+
+.product-info-buyButton.discover {
+	border: solid 5px var(--dark-grey);
+	transition: .3s;
+	transition-delay: .2s;
+}
+
+.product-info-buyButton.discover::after {
+	background-image: url(../../img/SVG/liquid-blue.svg);
+}
+
+.product-info-buyButton.discover:hover {
+	color: var(--light-pink);
+}
+
+/* PRODUCT DETAILS OVERLAY */
+
+.product-info-details-content {
+	background: var(--light-pink);
+	position: absolute;
+	top: 0;
+	left: 25%;
+	right: 0;
+	bottom: 0;
+	transform: translate(100%);
+	transition: .3s ease-out;
+	overflow-y: scroll;
+	padding: 20px;
+	border-radius: 20px 0 0 20px;
+}
+
+.product-info-details-content.is-active {
+	transform: translate(0);
+	box-shadow: -40px 0 40px rgba(0, 0, 0, 0.15);
+}
+
+.product-info-details-content-title {
+	font-size: 26px;
+	margin-bottom: 15px;
+}
+
+.product-info-details-content-list {
+	font-size: 16px;
+	font-weight: 300;
+	margin-bottom: 40px;
+}
+
+.product-info-details-content-list li {
+	margin-bottom: 10px;
+}
+
+.product-info-details-content-list:last-child li {
+	margin-left: 20px;
+	list-style: disc;
+	list-style-position: inherit;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+	.product-info-tools {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.product-info-title,
+	.product-info-text,
+	.product-info-mini-title,
+	.product-info-content,
+	.product-info-category {
+		text-align: center;
+	}
+
+	.product-info-title {
+		font-size: 60px;
+	}
+
+	.product-info-text {
+		font-size: 16px;
+	}
+
+	.product-info-price {
+		margin-bottom: 30px;
+	}
+
+	.product-info-details-content.is-active {
+		transform: translate(0);
+	}
+}

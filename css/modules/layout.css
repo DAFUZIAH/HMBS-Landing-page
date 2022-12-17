@@ -1,0 +1,29 @@
+.l-navigation {
+	margin-top: 85px;
+}
+
+.l-margin {
+	margin-bottom: 300px;
+}
+
+.l-socials {
+	text-align: right;
+}
+
+.move-to {
+	position: absolute;
+	left: 50%;
+	top: -185px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+	.l-navigation {
+		margin-top: 20px;
+	}
+
+	.l-margin {
+		margin-bottom: 100px;
+	}
+}

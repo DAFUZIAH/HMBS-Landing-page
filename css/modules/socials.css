@@ -1,0 +1,18 @@
+.socials {
+	margin-bottom: 80px;
+}
+
+.socials-title {
+	font-size: 32px;
+	font-weight: 700;
+	margin-bottom: 40px;
+}
+
+.socials-link {
+	font-size: 30px;
+	display: inline-block;
+}
+
+.socials-link:first-child {
+	margin-right: 25px;
+}

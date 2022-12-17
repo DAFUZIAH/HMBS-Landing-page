@@ -1,0 +1,208 @@
+/* MAIN SETTINGS */
+
+.shop-overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 65%;
+	background: var(--light-pink);
+	border-radius: 50px 0 0 50px;
+	transform: translate(100%);
+	transition: .3s ease-out;
+	z-index: 22;
+}
+
+.shop-overlay.is-active {
+	transform: translate(0);
+	box-shadow: -100px 2px 70px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* CONTENT */
+
+.shop-overlay-content-title {
+	font-size: 30px;
+	margin: 40px;
+	margin-right: 0;
+}
+
+.shop-overlay-content-close-button {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	cursor: pointer;
+	font-size: 36px;
+}
+
+.shop-product {
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-bottom: 30px;
+	display: none;
+}
+
+.shop-product.colza.display,
+.shop-product.chanvre.display,
+.shop-product.soja.display,
+.shop-product.discover.display {
+	display: flex;
+}
+
+.shop-overlay-content-product {
+	display: flex;
+	align-items: center;
+}
+
+.shop-overlay-content-product-image {
+	max-width: 50px;
+	margin-right: 20px;
+}
+
+/* SHOP PRODUCT DISCOVER */
+
+.shop-overlay-content-product.discover .shop-overlay-content-product-image:first-child,
+.shop-overlay-content-product.discover .shop-overlay-content-product-image:nth-child(2) {
+	margin-right: 0;
+}
+
+/* PRODUCT */
+
+.shop-overlay-content-product-title {
+	font-size: 28px;
+	margin-bottom: 10px;
+}
+
+.shop-overlay-content-product .price {
+	margin-bottom: 5px;
+}
+
+.shop-overlay-content-product .remove {
+	cursor: pointer;
+}
+
+.shop-overlay-content-product .price,
+.shop-overlay-content-product .remove {
+	font-family: var(--text-font);
+}
+
+/* ORDER BUTTON */
+
+.shop-overlay-orderButton {
+	font-family: var(--text-font);
+	color: var(--dark-grey);
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-size: 28px;
+	border: solid 5px var(--dark-grey);
+	border-radius: 42px;
+	text-align: center;
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+	left: 40px;
+	padding: 25px;
+	cursor: pointer;
+	overflow: hidden;
+	transition-delay: .2s;
+	transition: .3s;
+}
+
+.shop-overlay-orderButton::after {
+	content: '';
+	width: 300%;
+	height: 140%;
+	background-image: url(../../img/SVG/liquid-blue.svg);
+	position: absolute;
+	left: 0;
+	transform: translateX(30px) translateY(90px);
+	transition: .8s ease-out;
+	z-index: -1;
+}
+
+.shop-overlay-orderButton:hover {
+	color: var(--light-pink);
+}
+
+.shop-overlay-orderButton:hover::after {
+	transform: translateX(-80px) translateY(-40px);
+}
+
+/* VALUE NEXT TO THE PRODUCT */
+
+.colza-value,
+.chanvre-value,
+.soja-value,
+.discover-value {
+	font-family: var(--text-font);
+	font-weight: 700;
+	font-size: 23px;
+	width: 42px;
+	height: 42px;
+	border-radius: 60px;
+	color: var(--light-color);
+	background: var(--dark-grey);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	outline: none;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+	pointer-events: none;
+}
+
+.total-price {
+	display: flex;
+	position: absolute;
+	bottom: 170px;
+	right: 40px;
+	left: 40px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* TOTAL PRICE */
+
+.total-value {
+	font-family: var(--text-font);
+	font-weight: 700;
+	font-size: 36px;
+	color: var(--dark-grey);
+	display: inline-block;
+	max-width: 120px;
+	outline: none;
+	border: none;
+	text-align: center;
+	cursor: pointer;
+	pointer-events: none;
+	background: transparent;
+}
+
+.total-price-title {
+	font-size: 30px;
+}
+
+.total-price label {
+	font-family: var(--text-font);
+	font-weight: 700;
+	font-size: 36px;
+}
+
+.cart-statement {
+	text-align: center;
+	margin-top: 50%;
+}
+
+.cart-statement.no-display {
+	display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+	.shop-overlay {
+		left: 0;
+	}
+}
